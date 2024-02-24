@@ -15,14 +15,14 @@ namespace DesignPatterns.ConsoleView
 
             Kit drillHammerKit = new Kit(new DrillHammerToolSetFactory());
             Console.WriteLine("Аренда набора с дрелью и молотком\n");
-            drillHammerKit.Rent();
+            drillHammerKit.Rent(1);
             Console.WriteLine("\nВозвращение набора с дрелью и молотком\n");
             drillHammerKit.Return();
             Console.WriteLine();
 
             Kit SawScrewdriverKit = new Kit(new SawScrewdriverToolSetFactory());
             Console.WriteLine("Аренда набора с пилой и отвёрткой\n");
-            SawScrewdriverKit.Rent();
+            SawScrewdriverKit.Rent(4);
             Console.WriteLine("\nВозвращение набора с пилой и отвёрткой\n");
             SawScrewdriverKit.Return();
 

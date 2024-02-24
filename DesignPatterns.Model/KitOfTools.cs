@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -86,10 +87,15 @@ namespace DesignPatterns.Model
             toolOne = factory.CreateToolA();
             toolTwo = factory.CreateToolB();
         }
-        public void Rent()
+        public void Rent(int days)
         {
             toolOne.Rent();
+            decimal costFirstTool = toolOne.CalculateRentalCost(days);
             toolTwo.Rent();
+            decimal costSecondTool = toolTwo.CalculateRentalCost(days);
+
+            decimal resultCost = (costFirstTool + costSecondTool) * 0.7m;
+            Console.WriteLine("Стоимость набора: {0}", resultCost);   // Тут этого быть не должно, ну и рассчёт стоимости тоже должен уйти
         }
         public void Return()
         {
