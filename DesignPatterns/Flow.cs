@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesignPatterns.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,18 @@ namespace DesignPatterns.ConsoleView
     {
         public static void GetFlow()
         {
-            Console.WriteLine("Hello, World");
+            Console.WriteLine("Start");
+
+            Kit drillHammerKit = new Kit(new DrillHammerToolSetFactory());
+            drillHammerKit.Rent();
+            drillHammerKit.Return();
+
+            Kit SawScrewdriverKit = new Kit(new SawScrewdriverToolSetFactory());
+            SawScrewdriverKit.Rent();
+            SawScrewdriverKit.Return();
+
+            Console.ReadLine();
+
         }
     }
 }
