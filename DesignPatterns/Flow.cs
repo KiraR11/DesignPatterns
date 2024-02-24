@@ -8,5 +8,9 @@ namespace DesignPatterns.ConsoleView
 {
     internal class Flow
     {
+        public static void GetFlow()
+        {
+            Console.WriteLine("Hello, World");
+        }
     }
 }

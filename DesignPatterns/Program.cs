@@ -7,12 +7,13 @@ namespace DesignPatterns.ConsoleView
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World");
             try
             {
+                Flow.GetFlow();
             }
             catch (Exception ex)
             {
+
             }
         }
     }
