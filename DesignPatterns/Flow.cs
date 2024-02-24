@@ -11,14 +11,19 @@ namespace DesignPatterns.ConsoleView
     {
         public static void GetFlow()
         {
-            Console.WriteLine("Start");
+            Console.WriteLine("Start\n");
 
             Kit drillHammerKit = new Kit(new DrillHammerToolSetFactory());
+            Console.WriteLine("Аренда набора с дрелью и молотком\n");
             drillHammerKit.Rent();
+            Console.WriteLine("\nВозвращение набора с дрелью и молотком\n");
             drillHammerKit.Return();
+            Console.WriteLine();
 
             Kit SawScrewdriverKit = new Kit(new SawScrewdriverToolSetFactory());
+            Console.WriteLine("Аренда набора с пилой и отвёрткой\n");
             SawScrewdriverKit.Rent();
+            Console.WriteLine("\nВозвращение набора с пилой и отвёрткой\n");
             SawScrewdriverKit.Return();
 
             Console.ReadLine();
