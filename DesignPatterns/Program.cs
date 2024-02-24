@@ -1,10 +1,19 @@
-﻿using static DesignPatterns.ConsoleView.ConsoleMessage;
+﻿using DesignPatterns.ConsoleView;
+using static DesignPatterns.ConsoleView.ConsoleMessage;
 
-try
+namespace DesignPatterns.ConsoleView
 {
-
-}
-catch (Exception ex)
-{
-
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, World");
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+    }
 }
