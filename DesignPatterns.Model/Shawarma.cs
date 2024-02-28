@@ -26,6 +26,6 @@ namespace DesignPatterns.Model
         public Meat Meat { get;}
         public Sauce Sauce { get;}
         public List<Product> Additives { get;}
-        public virtual double Cost => (Lavash.GetPrice() + Meat.GetPrice() + Sauce.GetPrice() + Additives.Sum(x => x.GetPrice())) * 0.2;
+        public virtual double Cost => (Lavash.GetPrice() + Meat.GetPrice() + Sauce.GetPrice() + Additives.Sum(x => x.GetPrice())) * 1.2;
     }
 }
