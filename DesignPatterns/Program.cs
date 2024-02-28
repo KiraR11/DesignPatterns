@@ -1,10 +1,19 @@
 ﻿using static DesignPatterns.ConsoleView.ConsoleMessage;
-
-try
+namespace DesignPatterns.ConsoleView
 {
-
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Flow.StartProgram();
+            }
+            catch (Exception ex)
+            {
+                Flow.ErrorHandling();
+            }
+        }
+    }
 }
-catch (Exception ex)
-{
 
-}
