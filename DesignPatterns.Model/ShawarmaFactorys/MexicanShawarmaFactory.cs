@@ -33,9 +33,9 @@ namespace DesignPatterns.Model.ShawarmaFactorys
             return new TomatoSauce();
         }
 
-        public override List<Product> CreateAdditives()
+        public override Additives CreateAdditives()
         {
-            return [new Jalapeno(), new FrenchFries()];
+            return new Additives([new Jalapeno(), new FrenchFries()]);
         }
     }
 }

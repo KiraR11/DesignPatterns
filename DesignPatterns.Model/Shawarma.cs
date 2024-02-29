@@ -17,15 +17,20 @@ namespace DesignPatterns.Model
             Meat = factory.CreateMeat();
             Sauce = factory.CreateSauce();
             Additives = factory.CreateAdditives();
-            Factory = factory;
         }
-
-        public ShawarmaFactory Factory { get; }
+        protected Shawarma(Shawarma shawarma)
+        {
+            Name = shawarma.Name;
+            Lavash = shawarma.Lavash;
+            Meat = shawarma.Meat;
+            Sauce = shawarma.Sauce;
+            Additives = shawarma.Additives;
+        }
         public string Name { get; protected set; }
         public Lavash Lavash { get;}
         public Meat Meat { get;}
         public Sauce Sauce { get;}
-        public List<Product> Additives { get;}
-        public virtual double Cost => (Lavash.GetPrice() + Meat.GetPrice() + Sauce.GetPrice() + Additives.Sum(x => x.GetPrice())) * 1.2;
+        public Additives Additives { get;}
+        public virtual double Cost => (Lavash.GetPrice() + Meat.GetPrice() + Sauce.GetPrice() + Additives.Sum()) * 1.2;
     }
 }

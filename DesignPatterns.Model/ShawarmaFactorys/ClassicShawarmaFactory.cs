@@ -33,9 +33,9 @@ namespace DesignPatterns.Model.ShawarmaFactorys
             return new СreamSauce();
         }
 
-        public override List<Product> CreateAdditives()
+        public override Additives CreateAdditives()
         {
-            return new List<Product>();
+            return new Additives();
         }
     }
 }
