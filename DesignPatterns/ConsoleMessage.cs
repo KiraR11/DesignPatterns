@@ -19,6 +19,8 @@ namespace DesignPatterns.ConsoleView
             Console.WriteLine($"Соус: {shawarma.Sauce.GetName()}\n");
             Console.WriteLine($"Лаваш: {shawarma.Lavash.GetName()}\n");
             OutputAdditivesShawarma(shawarma.Additives);
+
+            Console.WriteLine($"Цена: {shawarma.Discount()}");
             Console.WriteLine("____________________________________________");
         }
 

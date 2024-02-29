@@ -5,6 +5,7 @@ using DesignPatterns.Model.Products.Lavashs;
 using DesignPatterns.Model.Products.Meats;
 using DesignPatterns.Model.Products.Sauces;
 using DesignPatterns.Model.ShawarmaFactorys;
+using DesignPatterns.Model.ShawarmaStrategy;
 
 namespace DesignPatterns.Model
 {
@@ -26,11 +27,29 @@ namespace DesignPatterns.Model
             Sauce = shawarma.Sauce;
             Additives = shawarma.Additives;
         }
+        private IDiscount _discount;
+        public void SetDiscount(IDiscount discount)
+        {
+            _discount = discount;
+        }
+
+        public double Discount()
+        {
+            if (_discount is null)
+            {
+                return Cost();
+            }
+            return Cost() * _discount.Discount();
+        }
         public string Name { get; protected set; }
         public Lavash Lavash { get;}
         public Meat Meat { get;}
         public Sauce Sauce { get;}
         public Additives Additives { get;}
-        public virtual double Cost => (Lavash.GetPrice() + Meat.GetPrice() + Sauce.GetPrice() + Additives.Sum()) * 1.2;
+
+        private double Cost() 
+        {
+            return (Lavash.GetPrice() + Meat.GetPrice() + Sauce.GetPrice() + Additives.Sum());
+        }
     }
 }
