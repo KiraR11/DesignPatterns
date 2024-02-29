@@ -9,7 +9,7 @@ namespace DesignPatterns.ConsoleView
     {
         public static void StartProgram()
         {
-            while (true)
+            do
             {
                 ConsoleMessage.OutputHello();
 
@@ -21,11 +21,7 @@ namespace DesignPatterns.ConsoleView
 
                 ConsoleMessage.OutputCompositionShawarma(shawarma);
 
-                if (Console.ReadLine() == "exit")
-                {
-                    break;
-                }
-            }
+            } while (ConsoleMessage.PoolYesOrNo("Купить ещё шаурму"));
         }
 
         public static Shawarma ChooseShawarma()
