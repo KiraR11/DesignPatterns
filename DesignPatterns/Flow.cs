@@ -19,6 +19,7 @@ namespace DesignPatterns.ConsoleView
             ConsoleMessage.OutputCompositionShawarma(veganShawarma);
             ConsoleMessage.OutputCompositionShawarma(mexicanShawarma);
             ConsoleMessage.OutputCompositionShawarma(cheeseShawarma);
+
         }
 
         public static void ErrorHandling()
