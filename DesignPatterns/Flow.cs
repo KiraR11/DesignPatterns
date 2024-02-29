@@ -16,9 +16,9 @@ namespace DesignPatterns.ConsoleView
             classicShawarma = new JalapenoDecorator(new JalapenoDecorator(new CheeseDecorator(classicShawarma)));
             classicShawarma = new FrenchFriesDecorator(new FrenchFriesDecorator(new CheeseDecorator(classicShawarma)));
             ConsoleMessage.OutputCompositionShawarma(classicShawarma);
-            //ConsoleMessage.OutputCompositionShawarma(veganShawarma);
-            //ConsoleMessage.OutputCompositionShawarma(mexicanShawarma);
-            //ConsoleMessage.OutputCompositionShawarma(cheeseShawarma);
+            ConsoleMessage.OutputCompositionShawarma(veganShawarma);
+            ConsoleMessage.OutputCompositionShawarma(mexicanShawarma);
+            ConsoleMessage.OutputCompositionShawarma(cheeseShawarma);
         }
 
         public static void ErrorHandling()
