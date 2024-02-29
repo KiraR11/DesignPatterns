@@ -1,33 +1,30 @@
 ﻿using DesignPatterns.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DesignPatterns.Model.ShawarmaDecorators;
+using DesignPatterns.Model.ShawarmaFactorys;
 
 namespace DesignPatterns.ConsoleView
 {
-    internal class Flow
+    public class Flow
     {
-        public static void GetFlow()
+        public static void StartProgram()
         {
-            Console.WriteLine("Start\n");
+            Shawarma classicShawarma = new(new ClassicShawarmaFactory());
+            Shawarma veganShawarma = new(new VeganShawarmaFactory());
+            Shawarma mexicanShawarma = new(new MexicanShawarmaFactory());
+            Shawarma cheeseShawarma = new(new CheeseShawarmaFactory());
+            classicShawarma = new CheeseDecorator(new CheeseDecorator(new CheeseDecorator(classicShawarma)));
+            classicShawarma = new JalapenoDecorator(new JalapenoDecorator(new CheeseDecorator(classicShawarma)));
+            classicShawarma = new FrenchFriesDecorator(new FrenchFriesDecorator(new CheeseDecorator(classicShawarma)));
+            ConsoleMessage.OutputCompositionShawarma(classicShawarma);
+            ConsoleMessage.OutputCompositionShawarma(veganShawarma);
+            ConsoleMessage.OutputCompositionShawarma(mexicanShawarma);
+            ConsoleMessage.OutputCompositionShawarma(cheeseShawarma);
 
-            Kit drillHammerKit = new Kit(new DrillHammerToolSetFactory());
-            Console.WriteLine("Аренда набора с дрелью и молотком\n");
-            drillHammerKit.Rent(1);
-            Console.WriteLine("\nВозвращение набора с дрелью и молотком\n");
-            drillHammerKit.Return();
-            Console.WriteLine();
+        }
 
-            Kit SawScrewdriverKit = new Kit(new SawScrewdriverToolSetFactory());
-            Console.WriteLine("Аренда набора с пилой и отвёрткой\n");
-            SawScrewdriverKit.Rent(4);
-            Console.WriteLine("\nВозвращение набора с пилой и отвёрткой\n");
-            SawScrewdriverKit.Return();
-
-            Console.ReadLine();
-
+        public static void ErrorHandling()
+        {
+            throw new NotImplementedException();
         }
     }
 }
