@@ -20,7 +20,7 @@ namespace DesignPatterns.ConsoleView
             Console.WriteLine($"Лаваш: {shawarma.Lavash.GetName()}\n");
             OutputAdditivesShawarma(shawarma.Additives);
 
-            Console.WriteLine($"Цена: {shawarma.Discount()}");
+            Console.WriteLine($"Цена: {shawarma.Cost()}");
             Console.WriteLine("____________________________________________");
         }
 
@@ -34,6 +34,70 @@ namespace DesignPatterns.ConsoleView
                     Console.WriteLine($"    {added.GetName()}\n");
                 }
             }
+        }
+
+        public static void OutputHello()
+        {
+            Console.WriteLine("Здравствуй, дорогой покупатель!");
+        }
+
+        public static void OutputIntroduce()
+        {
+            Console.WriteLine("О боже... не может быть. Ваше... имя Сэр?");
+        }
+        public static void OutputGetDiscount()
+        {
+            Console.WriteLine("Так это вы!");
+        }
+        public static int ChoiceDiscount()
+        {
+            Console.WriteLine("1 - Студент\n2 - Бездомный\n3 - Именинник\n4 - Обычный человек");
+            int roleNumber = int.Parse(Console.ReadLine());
+            return roleNumber;
+        }
+        public static void OutputHomelessDiscount()
+        {
+            OutputGetDiscount();
+            Console.WriteLine("Вам положена скидка Бездомного!");
+        }
+        public static void OutputStudentDiscount()
+        {
+            OutputGetDiscount();
+            Console.WriteLine("Вам положена скидка Студента!");
+        }
+        public static void OutputBirthdayDiscount()
+        {
+            OutputGetDiscount();
+            Console.WriteLine("Вам положена скидка Именинника!");
+        }
+        public static void OutputNoDiscount()
+        {
+            OutputGetDiscount();
+            Console.WriteLine("Вы обычный человек, вам не положено скидок!");
+        }
+        public static void OutputUnknownInput()
+        {
+            Console.WriteLine("Я кажется не расслышал...");
+        }
+        public static int ChoiceShawarma()
+        {
+            Console.WriteLine("Какую шаурму хотите?\n1 - Классическая\n2 - Сырная\n3 - Мексиканская\n4 - Вегетарианская");
+            int shawarmaNumber = int.Parse(Console.ReadLine());
+            return shawarmaNumber;
+        }
+        public static void OutputGoodChoise()
+        {
+            Console.WriteLine("Отличный выбор!");
+        }
+        public static int ChoiceAdditives()
+        {
+            Console.WriteLine("Какие добавки хотите?\n1 - Сыр\n2 - Картошка фри\n3 - Халапеньо\n4 - Без добавок");
+            int shawarmaNumber = int.Parse(Console.ReadLine());
+            return shawarmaNumber;
+        }
+        public static void OutputNoAdditives()
+        {
+            Console.WriteLine("Хорошо, никаких добавок!");
         }
     }
 }

@@ -33,23 +33,18 @@ namespace DesignPatterns.Model
             _discount = discount;
         }
 
-        public double Discount()
+        public double Cost()
         {
             if (_discount is null)
             {
-                return Cost();
+                return (Lavash.GetPrice() + Meat.GetPrice() + Sauce.GetPrice() + Additives.Sum());
             }
-            return Cost() * _discount.Discount();
+            return _discount.Discount() * (Lavash.GetPrice() + Meat.GetPrice() + Sauce.GetPrice() + Additives.Sum());
         }
         public string Name { get; protected set; }
         public Lavash Lavash { get;}
         public Meat Meat { get;}
         public Sauce Sauce { get;}
         public Additives Additives { get;}
-
-        private double Cost() 
-        {
-            return (Lavash.GetPrice() + Meat.GetPrice() + Sauce.GetPrice() + Additives.Sum());
-        }
     }
 }
