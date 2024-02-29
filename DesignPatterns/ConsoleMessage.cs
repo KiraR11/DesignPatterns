@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DesignPatterns.Model;
 using DesignPatterns.Model.Products;
+using DesignPatterns.Model.Products.Additives;
 
 namespace DesignPatterns.ConsoleView
 {
@@ -21,12 +22,12 @@ namespace DesignPatterns.ConsoleView
             Console.WriteLine("____________________________________________");
         }
 
-        public static void OutputAdditivesShawarma(List<Product> additives)
+        public static void OutputAdditivesShawarma(Additives additives)
         {
-            if (additives.Count != 0)
+            if (additives.AdditivesProduct.Count != 0)
             {
                 Console.WriteLine($"Добавки: \n");
-                foreach (Product added in additives)
+                foreach (Product added in additives.AdditivesProduct)
                 {
                     Console.WriteLine($"    {added.GetName()}\n");
                 }

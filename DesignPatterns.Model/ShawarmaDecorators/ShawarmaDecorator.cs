@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Model.ShawarmaDecorators
 {
-    internal abstract class ShawarmaDecorator : Shawarma
+    public abstract class ShawarmaDecorator : Shawarma
     {
-        public ShawarmaDecorator(Shawarma shawarma) : base(shawarma.Factory)
+        public ShawarmaDecorator(Shawarma shawarma) : base(shawarma)
         {
             Shawarma = shawarma;
         }

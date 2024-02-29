@@ -29,18 +29,17 @@ namespace DesignPatterns.Model.Products
         {
             if (count > 0)
             {
+                _price += (_price / _countReplicat) * count;
+                _countReplicat += count;
                 if (_isReplicated)
                 {
-                    _name = _name.Remove(_name.Length - _countReplicat.ToString().Length - 1,
-                        _countReplicat.ToString().Length) + count;
-                    _price += (_price / _countReplicat) * count;
-                    _countReplicat += count;
+                    _name = _name.Remove(_name.Length - _countReplicat.ToString().Length,
+                        _countReplicat.ToString().Length) + _countReplicat;
                 }
                 else
                 {
-                    _name += $" x {count}";
+                    _name += $" x {_countReplicat}";
                     _isReplicated = true;
-                    _countReplicat += count;
                 }
             }
             else
