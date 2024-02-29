@@ -1,6 +1,5 @@
 ﻿using DesignPatterns.ConsoleView;
 using static DesignPatterns.ConsoleView.ConsoleMessage;
-
 namespace DesignPatterns.ConsoleView
 {
     internal class Program
@@ -9,12 +8,13 @@ namespace DesignPatterns.ConsoleView
         {
             try
             {
-                Flow.GetFlow();
+                Flow.StartProgram();
             }
             catch (Exception ex)
             {
-
+                Flow.ErrorHandling();
             }
         }
     }
 }
+
