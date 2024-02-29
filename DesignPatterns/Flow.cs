@@ -2,7 +2,6 @@
 using DesignPatterns.Model.ShawarmaDecorators;
 using DesignPatterns.Model.ShawarmaFactorys;
 using DesignPatterns.Model.ShawarmaStrategy;
-using System.Reflection.Metadata.Ecma335;
 
 namespace DesignPatterns.ConsoleView
 {
@@ -12,26 +11,6 @@ namespace DesignPatterns.ConsoleView
         {
             while (true)
             {
-
-                //Shawarma classicShawarma = new(new ClassicShawarmaFactory());
-                //Shawarma veganShawarma = new(new VeganShawarmaFactory());
-                //Shawarma mexicanShawarma = new(new MexicanShawarmaFactory());
-                //Shawarma cheeseShawarma = new(new CheeseShawarmaFactory());
-                //classicShawarma = new CheeseDecorator(new CheeseDecorator(new CheeseDecorator(classicShawarma)));
-                //classicShawarma = new JalapenoDecorator(new JalapenoDecorator(new CheeseDecorator(classicShawarma)));
-                //classicShawarma = new FrenchFriesDecorator(new FrenchFriesDecorator(new CheeseDecorator(classicShawarma)));
-
-                //classicShawarma.SetDiscount(new HomelessDiscount());
-
-                //classicShawarma.SetDiscount(new BirthdayDiscount());
-                //classicShawarma.SetDiscount(new StudentDiscount());
-                //ConsoleMessage.OutputCompositionShawarma(classicShawarma);
-
-                //ConsoleMessage.OutputCompositionShawarma(classicShawarma);
-                //ConsoleMessage.OutputCompositionShawarma(veganShawarma);
-                //ConsoleMessage.OutputCompositionShawarma(mexicanShawarma);
-                //ConsoleMessage.OutputCompositionShawarma(cheeseShawarma);
-
                 ConsoleMessage.OutputHello();
 
                 Shawarma shawarma = ChooseShawarma();
@@ -42,11 +21,10 @@ namespace DesignPatterns.ConsoleView
 
                 ConsoleMessage.OutputCompositionShawarma(shawarma);
 
-                Console.ReadKey();
-
-
-
-
+                if (Console.ReadLine() == "exit")
+                {
+                    break;
+                }
             }
         }
 
@@ -86,9 +64,9 @@ namespace DesignPatterns.ConsoleView
 
         public static Shawarma ChooseAdditives(Shawarma shawarma)
         {
+            Shawarma someShawarmaAdditives = shawarma;
             do
             {
-                Shawarma someShawarmaAdditives = shawarma;
                 int additivesNumber = ConsoleMessage.ChoiceAdditives();
                 if (additivesNumber == 1)
                 {
@@ -107,6 +85,7 @@ namespace DesignPatterns.ConsoleView
                 else if (additivesNumber == 4)
                 {
                     ConsoleMessage.OutputNoAdditives();
+                    break;
                 }
                 else
                 {
@@ -114,8 +93,8 @@ namespace DesignPatterns.ConsoleView
                     continue;
                 }
                 ConsoleMessage.OutputGoodChoise();
-                return someShawarmaAdditives;
-            } while (true);
+            } while (ConsoleMessage.PoolYesOrNo("Выбрать еще добавку?"));
+            return someShawarmaAdditives;
         }
 
         public static Shawarma ChooseRoleDiscount(Shawarma shawarma)

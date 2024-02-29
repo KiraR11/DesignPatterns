@@ -11,7 +11,7 @@ namespace DesignPatterns.ConsoleView
 {
     public static class ConsoleMessage
     {
-        public static void  OutputCompositionShawarma(Shawarma shawarma)
+        public static void OutputCompositionShawarma(Shawarma shawarma)
         {
             Console.WriteLine("____________________________________________");
             Console.WriteLine($"\nСостав {shawarma.Name}:\n");
@@ -23,6 +23,28 @@ namespace DesignPatterns.ConsoleView
             Console.WriteLine($"Цена: {shawarma.Cost()}");
             Console.WriteLine("____________________________________________");
         }
+
+        public static bool PoolYesOrNo(string question)
+        {
+            string yes = "y";
+            string no = "n";
+            Console.WriteLine("\n{0}? ({1}/{2})\n", question, yes, no);
+            while (true)
+            {
+                string answer = Console.ReadLine()!;
+                if (answer!.ToLower() == yes)
+                    return true;
+                else if (answer.ToLower() == no)
+                    return false;
+                else
+                    MessageIncorrectInput();
+            }
+        }
+        public static void MessageIncorrectInput()
+        {
+            Console.WriteLine("\nНекорректный ввод поробуйте ещё раз\n");
+        }
+
 
         public static void OutputAdditivesShawarma(Additives additives)
         {
