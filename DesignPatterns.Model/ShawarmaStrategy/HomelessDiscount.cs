@@ -1,4 +1,8 @@
-﻿using System;
+﻿using DesignPatterns.Model.Products.Additives;
+using DesignPatterns.Model.Products.Lavashs;
+using DesignPatterns.Model.Products.Meats;
+using DesignPatterns.Model.Products.Sauces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +12,9 @@ namespace DesignPatterns.Model.ShawarmaStrategy
 {
     public class HomelessDiscount : IDiscount
     {
-        double IDiscount.Discount()
+        double IDiscount.Discount(Shawarma shawarma)
         {
-            return 0.1;
+            return (shawarma.Meat.GetPrice() + shawarma.Sauce.GetPrice() + shawarma.Additives.Sum()) * 0.3;
         }
     }
 }

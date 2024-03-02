@@ -8,6 +8,6 @@ namespace DesignPatterns.Model.ShawarmaStrategy
 {
     public interface IDiscount
     {
-        double Discount();
+        double Discount(Shawarma shawarma);
     }
 }

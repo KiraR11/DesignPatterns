@@ -11,7 +11,7 @@ namespace DesignPatterns.Model.Products.Lavashs
         public ClassicLavash()
         {
             _name = "Классический " + _name;
-            _price = 18;
+            _price = 60;
         }
 
     }

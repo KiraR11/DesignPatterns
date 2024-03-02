@@ -8,9 +8,12 @@ namespace DesignPatterns.Model.ShawarmaStrategy
 {
     public class BirthdayDiscount : IDiscount
     {
-        double IDiscount.Discount()
+        double IDiscount.Discount(Shawarma shawarma)
         {
-            return 0.5;
+            double cost = shawarma.Lavash.GetPrice() + shawarma.Meat.GetPrice() + shawarma.Sauce.GetPrice() + shawarma.Additives.Sum();
+            double discount = 70;
+            cost = cost > discount ? cost - discount : cost;
+            return cost;
         }
     }
 }

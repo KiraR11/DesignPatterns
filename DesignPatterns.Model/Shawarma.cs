@@ -39,7 +39,7 @@ namespace DesignPatterns.Model
             {
                 return (Lavash.GetPrice() + Meat.GetPrice() + Sauce.GetPrice() + Additives.Sum());
             }
-            return _discount.Discount() * (Lavash.GetPrice() + Meat.GetPrice() + Sauce.GetPrice() + Additives.Sum());
+            return _discount.Discount(this);
         }
         public string Name { get; protected set; }
         public Lavash Lavash { get;}

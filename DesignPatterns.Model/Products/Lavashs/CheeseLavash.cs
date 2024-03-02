@@ -11,7 +11,7 @@ namespace DesignPatterns.Model.Products.Lavashs
         public CheeseLavash()
         {
             _name = "Сырный " + _name;
-            _price = 25;
+            _price = 100;
         }
     }
 }
