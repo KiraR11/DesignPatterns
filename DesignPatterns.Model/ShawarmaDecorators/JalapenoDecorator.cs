@@ -11,7 +11,11 @@ namespace DesignPatterns.Model.ShawarmaDecorators
     {
         public JalapenoDecorator(Shawarma shawarma) : base(shawarma)
         {
-            Additives.Add(new Jalapeno());
+            Shawarma.Additives.Add(new Jalapeno());
+        }
+        public override TimeOnly GetCookingTime()
+        {
+            return Shawarma.GetCookingTime().AddMinutes(0.05);
         }
     }
 }

@@ -11,7 +11,11 @@ namespace DesignPatterns.Model.ShawarmaDecorators
     {
         public FrenchFriesDecorator(Shawarma shawarma) : base(shawarma)
         {
-            Additives.Add(new FrenchFries());
+            Shawarma.Additives.Add(new FrenchFries());
+        }
+        public override TimeOnly GetCookingTime()
+        {
+            return Shawarma.GetCookingTime().AddMinutes(0.1);
         }
     }
 }

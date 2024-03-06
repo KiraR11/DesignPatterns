@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPatterns.Model.ShawarmaDecorators.CheeseDecorator">
+    <Position X="5.75" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DesignPatterns.Model.ShawarmaDecorators.FrenchFriesDecorator">
+    <Position X="8" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DesignPatterns.Model.ShawarmaDecorators.JalapenoDecorator">
+    <Position X="10.25" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DesignPatterns.Model.ShawarmaDecorators.ShawarmaDecorator">
+    <Position X="8" Y="3.75" Width="1.5" />
+    <AssociationLine Name="Shawarma" Type="DesignPatterns.Model.Shawarma" FixedFromPoint="true">
+      <Path>
+        <Point X="8.312" Y="3.75" />
+        <Point X="8.312" Y="3.247" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Shawarma" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPatterns.Model.Shawarma">
+    <Position X="8" Y="1.5" Width="1.5" />
+    <Members>
+      <Method Name="Cost" Hidden="true" />
+      <Property Name="Lavash" Hidden="true" />
+      <Property Name="Meat" Hidden="true" />
+      <Property Name="Name" Hidden="true" />
+      <Property Name="Sauce" Hidden="true" />
+      <Method Name="Shawarma" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

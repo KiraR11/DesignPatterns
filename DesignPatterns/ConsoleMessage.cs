@@ -19,9 +19,14 @@ namespace DesignPatterns.ConsoleView
             Console.WriteLine($"Соус: {shawarma.Sauce.GetName()}\n");
             Console.WriteLine($"Лаваш: {shawarma.Lavash.GetName()}\n");
             OutputAdditivesShawarma(shawarma.Additives);
-
+            OutputCookingTimeShawarma(shawarma);
             Console.WriteLine($"Цена: {shawarma.Cost()}");
             Console.WriteLine("____________________________________________");
+        }
+
+        private static void OutputCookingTimeShawarma(Shawarma shawarma)
+        {
+            Console.WriteLine($"\nВаша шаурма будет готова через: {shawarma.GetCookingTime().ToString("mm:ss")} минут");
         }
 
         public static bool PoolYesOrNo(string question)

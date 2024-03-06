@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPatterns.Model.ShawarmaFactorys.CheeseShawarmaFactory">
+    <Position X="7.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DesignPatterns.Model.ShawarmaFactorys.ClassicShawarmaFactory">
+    <Position X="9.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DesignPatterns.Model.ShawarmaFactorys.MexicanShawarmaFactory">
+    <Position X="14" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DesignPatterns.Model.ShawarmaFactorys.ShawarmaFactory">
+    <Position X="10.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DesignPatterns.Model.ShawarmaFactorys.VeganShawarmaFactory">
+    <Position X="11.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DesignPatterns.Model.Shawarma">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <Members>
+      <Property Name="Additives" Hidden="true" />
+      <Method Name="Cost" Hidden="true" />
+      <Property Name="Discount" Hidden="true" />
+      <Method Name="GetCookingTime" Hidden="true" />
+      <Property Name="Name" Hidden="true" />
+      <Method Name="Shawarma" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Meat" />
+      <Property Name="Lavash" />
+      <Property Name="Sauce" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPatterns.Model.Products.Sauces.Sauce" Collapsed="true">
+    <Position X="0.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DesignPatterns.Model.Products.Meats.Meat" Collapsed="true">
+    <Position X="5.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DesignPatterns.Model.Products.Lavashs.Lavash" Collapsed="true">
+    <Position X="3" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
