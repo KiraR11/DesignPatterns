@@ -16,7 +16,7 @@ namespace DesignPatterns.Model.ShawarmaDecorators
 
         public override TimeOnly GetCookingTime()
         {
-            return Shawarma.GetCookingTime().AddMinutes(0.3);
+            return Shawarma.GetCookingTime().AddMinutes(0.2);
         }
     }
 }
