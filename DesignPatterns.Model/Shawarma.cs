@@ -41,6 +41,11 @@ namespace DesignPatterns.Model
             }
             return _discount.Discount(this);
         }
+
+        public virtual TimeOnly GetCookingTime()
+        {
+            return new TimeOnly(0, 2);
+        }
         public string Name { get; protected set; }
         public Lavash Lavash { get;}
         public Meat Meat { get;}
