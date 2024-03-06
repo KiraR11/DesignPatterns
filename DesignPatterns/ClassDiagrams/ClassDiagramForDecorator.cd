@@ -14,7 +14,16 @@
   </Class>
   <Class Name="DesignPatterns.Model.ShawarmaDecorators.ShawarmaDecorator">
     <Position X="8" Y="3.75" Width="1.5" />
+    <AssociationLine Name="Shawarma" Type="DesignPatterns.Model.Shawarma" FixedFromPoint="true">
+      <Path>
+        <Point X="8.312" Y="3.75" />
+        <Point X="8.312" Y="3.247" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Shawarma" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="DesignPatterns.Model.Shawarma">
     <Position X="8" Y="1.5" Width="1.5" />
@@ -24,7 +33,6 @@
       <Property Name="Meat" Hidden="true" />
       <Property Name="Name" Hidden="true" />
       <Property Name="Sauce" Hidden="true" />
-      <Method Name="SetDiscount" Hidden="true" />
       <Method Name="Shawarma" Hidden="true" />
     </Members>
     <TypeIdentifier />

@@ -21,14 +21,21 @@
     <TypeIdentifier />
   </Class>
   <Class Name="DesignPatterns.Model.Shawarma">
-    <Position X="3" Y="1" Width="1.5" />
+    <Position X="3" Y="1.5" Width="1.5" />
     <Members>
+      <Property Name="Additives" Hidden="true" />
       <Method Name="Cost" Hidden="true" />
+      <Property Name="Discount" Hidden="true" />
       <Method Name="GetCookingTime" Hidden="true" />
-      <Method Name="SetDiscount" Hidden="true" />
+      <Property Name="Name" Hidden="true" />
       <Method Name="Shawarma" Hidden="true" />
     </Members>
     <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Meat" />
+      <Property Name="Lavash" />
+      <Property Name="Sauce" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="DesignPatterns.Model.Products.Sauces.Sauce" Collapsed="true">
     <Position X="0.75" Y="4.25" Width="1.5" />

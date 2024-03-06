@@ -21,7 +21,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="DesignPatterns.Model.Shawarma">
-    <Position X="6.5" Y="2.25" Width="1.5" />
+    <Position X="4.75" Y="2.25" Width="1.5" />
     <Members>
       <Property Name="Additives" Hidden="true" />
       <Method Name="GetCookingTime" Hidden="true" />
@@ -32,6 +32,9 @@
       <Method Name="Shawarma" Hidden="true" />
     </Members>
     <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Discount" />
+    </ShowAsAssociation>
   </Class>
   <Interface Name="DesignPatterns.Model.ShawarmaStrategy.IDiscount">
     <Position X="9.25" Y="2.25" Width="1.5" />
