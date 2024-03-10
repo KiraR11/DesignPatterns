@@ -103,20 +103,20 @@ namespace DesignPatterns.ConsoleView
                 if (shawarmaNumber == 1)
                 {
                     ConsoleMessage.OutputStudentDiscount();
-                    someShawarmaCost.Cost = new StudentCost();
+                    someShawarmaCost.CurrentCost = new StudentCost();
 
                 }
                 else if (shawarmaNumber == 2)
                 {
                     ConsoleMessage.OutputHomelessDiscount();
-                    someShawarmaCost.Cost = new HomelessCost();
+                    someShawarmaCost.CurrentCost = new HomelessCost();
 
 
                 }
                 else if (shawarmaNumber == 3)
                 {
                     ConsoleMessage.OutputBirthdayDiscount();
-                    someShawarmaCost.Cost = new BirthdayCost();
+                    someShawarmaCost.CurrentCost = new BirthdayCost();
 
                 }
                 else if (shawarmaNumber == 4)
