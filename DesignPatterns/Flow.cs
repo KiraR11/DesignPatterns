@@ -17,7 +17,7 @@ namespace DesignPatterns.ConsoleView
 
                 shawarma = ChooseAdditives(shawarma);
 
-                shawarma = ChooseRoleDiscount(shawarma);
+                shawarma = ChooseRoleCost(shawarma);
 
                 ConsoleMessage.OutputCompositionShawarma(shawarma);
 
@@ -93,30 +93,30 @@ namespace DesignPatterns.ConsoleView
             return someShawarmaAdditives;
         }
 
-        public static Shawarma ChooseRoleDiscount(Shawarma shawarma)
+        public static Shawarma ChooseRoleCost(Shawarma shawarma)
         {
-            Shawarma someShawarmaDiscount = shawarma;
+            Shawarma someShawarmaCost = shawarma;
             do
             {
                 ConsoleMessage.OutputIntroduce();
-                int shawarmaNumber = ConsoleMessage.ChoiceDiscount();
+                int shawarmaNumber = ConsoleMessage.ChoiceCost();
                 if (shawarmaNumber == 1)
                 {
                     ConsoleMessage.OutputStudentDiscount();
-                    someShawarmaDiscount.Cost = new StudentDiscount();
+                    someShawarmaCost.Cost = new StudentCost();
 
                 }
                 else if (shawarmaNumber == 2)
                 {
                     ConsoleMessage.OutputHomelessDiscount();
-                    someShawarmaDiscount.Cost = new HomelessDiscount();
+                    someShawarmaCost.Cost = new HomelessCost();
 
 
                 }
                 else if (shawarmaNumber == 3)
                 {
                     ConsoleMessage.OutputBirthdayDiscount();
-                    someShawarmaDiscount.Cost = new BirthdayDiscount();
+                    someShawarmaCost.Cost = new BirthdayCost();
 
                 }
                 else if (shawarmaNumber == 4)
@@ -128,7 +128,7 @@ namespace DesignPatterns.ConsoleView
                     ConsoleMessage.OutputUnknownInput();
                     continue;
                 }
-                return someShawarmaDiscount;
+                return someShawarmaCost;
             } while (true);
         }
 

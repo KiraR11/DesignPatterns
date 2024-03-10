@@ -76,7 +76,7 @@ namespace DesignPatterns.ConsoleView
         {
             Console.WriteLine("Так это вы!");
         }
-        public static int ChoiceDiscount()
+        public static int ChoiceCost()
         {
             Console.WriteLine("1 - Студент\n2 - Бездомный\n3 - Именинник\n4 - Обычный человек");
             int roleNumber = int.Parse(Console.ReadLine());

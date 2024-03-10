@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Model.ShawarmaStrategy
 {
-    public class BirthdayDiscount : ICost
+    public class BirthdayCost : ICost
     {
         double ICost.Cost(Shawarma shawarma)
         {
