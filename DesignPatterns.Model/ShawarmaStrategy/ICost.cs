@@ -8,6 +8,6 @@ namespace DesignPatterns.Model.ShawarmaStrategy
 {
     public interface ICost
     {
-        double Cost(Shawarma shawarma);
+        public double Cost(Shawarma shawarma);
     }
 }

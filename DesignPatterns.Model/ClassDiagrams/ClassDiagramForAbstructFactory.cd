@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPatterns.Model.ShawarmaFactorys.CheeseShawarmaFactory">
+    <Position X="10.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAEAAAAAAACAgAAAAAAABA=</HashCode>
+      <FileName>ShawarmaFactorys\CheeseShawarmaFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Model.ShawarmaFactorys.ClassicShawarmaFactory">
+    <Position X="13" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAEAAAAAAACAgAAAAAAABA=</HashCode>
+      <FileName>ShawarmaFactorys\ClassicShawarmaFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Model.ShawarmaFactorys.MexicanShawarmaFactory">
+    <Position X="17.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAEAAAAAAACAgAAAAAAABA=</HashCode>
+      <FileName>ShawarmaFactorys\MexicanShawarmaFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Model.ShawarmaFactorys.ShawarmaFactory">
+    <Position X="14" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAEAAAAAAACAgAAAAAAABA=</HashCode>
+      <FileName>ShawarmaFactorys\ShawarmaFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Model.ShawarmaFactorys.VeganShawarmaFactory">
+    <Position X="15.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAEAAAAAAACAgAAAAAAABA=</HashCode>
+      <FileName>ShawarmaFactorys\VeganShawarmaFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Model.Shawarma">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <Members>
+      <Property Name="Additives" Hidden="true" />
+      <Property Name="Cost" Hidden="true" />
+      <Method Name="GetCookingTime" Hidden="true" />
+      <Property Name="Name" Hidden="true" />
+      <Method Name="Shawarma" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Lavash" Type="DesignPatterns.Model.Products.Lavashs.Lavash" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.188" Y="2.603" />
+        <Point X="4.188" Y="6.125" />
+        <Point X="5.25" Y="6.125" />
+        <Point X="5.25" Y="6.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Sauce" Type="DesignPatterns.Model.Products.Sauces.Sauce" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.25" Y="2.603" />
+        <Point X="3.25" Y="4.875" />
+        <Point X="1.938" Y="4.875" />
+        <Point X="1.938" Y="5.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAgAAAAAAAAAAgAABQAAAAQAAAAAAAAECAAAAA=</HashCode>
+      <FileName>Shawarma.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Lavash" />
+      <Property Name="Meat" />
+      <Property Name="Sauce" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPatterns.Model.Products.Sauces.Sauce" Collapsed="true">
+    <Position X="1.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Sauces\Sauce.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Model.Products.Meats.Meat" Collapsed="true">
+    <Position X="8" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Meats\Meat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Model.Products.Lavashs.Lavash" Collapsed="true">
+    <Position X="4.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Lavashs\Lavash.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Model.Products.Meats.ChickenMeat" Collapsed="true">
+    <Position X="6" Y="5.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Meats\ChickenMeat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Model.Products.Meats.PorkMeat" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Meats\PorkMeat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Model.Products.Meats.SoyMeat" Collapsed="true">
+    <Position X="9" Y="5.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Meats\SoyMeat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Model.Products.Sauces.TomatoSauce" Collapsed="true">
+    <Position X="0.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Sauces\TomatoSauce.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Model.Products.Sauces.СreamSauce" Collapsed="true">
+    <Position X="2.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Sauces\СreamSauce.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Model.Products.Lavashs.CheeseLavash" Collapsed="true">
+    <Position X="3.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Lavashs\CheeseLavash.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Model.Products.Lavashs.ClassicLavash" Collapsed="true">
+    <Position X="6" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Lavashs\ClassicLavash.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

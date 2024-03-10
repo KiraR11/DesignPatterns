@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPatterns.Model.Shawarma">
+    <Position X="4.5" Y="3" Width="1.5" />
+    <Members>
+      <Property Name="Additives" Hidden="true" />
+      <Method Name="GetCookingTime" Hidden="true" />
+      <Property Name="Lavash" Hidden="true" />
+      <Property Name="Meat" Hidden="true" />
+      <Property Name="Name" Hidden="true" />
+      <Property Name="Sauce" Hidden="true" />
+      <Method Name="Shawarma" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAgAAAAAAAAAAgAABQAAAAQAAAAAAAAECAAAAA=</HashCode>
+      <FileName>Shawarma.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cost" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPatterns.Model.ShawarmaStrategy.BirthdayCost" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ShawarmaStrategy\BirthdayCost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DesignPatterns.Model.ShawarmaStrategy.HomelessCost" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ShawarmaStrategy\HomelessCost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DesignPatterns.Model.ShawarmaStrategy.StudentCost" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ShawarmaStrategy\StudentCost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="DesignPatterns.Model.ShawarmaStrategy.ICost" Collapsed="true">
+    <Position X="8.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ShawarmaStrategy\ICost.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

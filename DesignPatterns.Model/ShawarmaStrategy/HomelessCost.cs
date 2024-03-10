@@ -12,7 +12,7 @@ namespace DesignPatterns.Model.ShawarmaStrategy
 {
     public class HomelessCost : ICost
     {
-        double ICost.Cost(Shawarma shawarma)
+        public double Cost(Shawarma shawarma)
         {
             return (shawarma.Meat.GetPrice() + shawarma.Sauce.GetPrice() + shawarma.Additives.Sum()) * 0.3;
         }

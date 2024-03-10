@@ -8,7 +8,7 @@ namespace DesignPatterns.Model.ShawarmaStrategy
 {
     public class BirthdayCost : ICost
     {
-        double ICost.Cost(Shawarma shawarma)
+        public double Cost(Shawarma shawarma)
         {
             double cost = shawarma.Lavash.GetPrice() + shawarma.Meat.GetPrice() + shawarma.Sauce.GetPrice() + shawarma.Additives.Sum();
             double discount = 70;

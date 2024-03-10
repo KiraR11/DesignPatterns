@@ -8,7 +8,7 @@ namespace DesignPatterns.Model.ShawarmaStrategy
 {
     public class StudentCost : ICost
     {
-        double ICost.Cost(Shawarma shawarma)
+        public double Cost(Shawarma shawarma)
         {
             return shawarma.Lavash.GetPrice() + shawarma.Sauce.GetPrice() + shawarma.Additives.Sum();
         }
