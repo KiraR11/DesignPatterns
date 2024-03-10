@@ -28,15 +28,15 @@ namespace DesignPatterns.Model
             Additives = shawarma.Additives;
         }
 
-        public IDiscount Discount {private get; set; }
+        public ICost Cost {private get; set; }
 
-        public double Cost()
+        public double ResultCost()
         {
-            if (Discount is null)
+            if (Cost is null)
             {
                 return (Lavash.GetPrice() + Meat.GetPrice() + Sauce.GetPrice() + Additives.Sum());
             }
-            return Discount.Discount(this);
+            return Cost.Cost(this);
         }
 
         public virtual TimeOnly GetCookingTime()

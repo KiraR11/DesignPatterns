@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Model.ShawarmaStrategy
 {
-    public interface IDiscount
+    public interface ICost
     {
-        double Discount(Shawarma shawarma);
+        double Cost(Shawarma shawarma);
     }
 }

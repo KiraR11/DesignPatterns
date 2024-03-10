@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Model.ShawarmaStrategy
 {
-    public class HomelessDiscount : IDiscount
+    public class HomelessDiscount : ICost
     {
-        double IDiscount.Discount(Shawarma shawarma)
+        double ICost.Cost(Shawarma shawarma)
         {
             return (shawarma.Meat.GetPrice() + shawarma.Sauce.GetPrice() + shawarma.Additives.Sum()) * 0.3;
         }

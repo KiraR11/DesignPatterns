@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Model.ShawarmaStrategy
 {
-    public class StudentDiscount : IDiscount
+    public class StudentDiscount : ICost
     {
-        double IDiscount.Discount(Shawarma shawarma)
+        double ICost.Cost(Shawarma shawarma)
         {
             return shawarma.Lavash.GetPrice() + shawarma.Sauce.GetPrice() + shawarma.Additives.Sum();
         }

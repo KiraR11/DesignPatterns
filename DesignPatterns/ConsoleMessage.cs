@@ -20,7 +20,7 @@ namespace DesignPatterns.ConsoleView
             Console.WriteLine($"Лаваш: {shawarma.Lavash.GetName()}\n");
             OutputAdditivesShawarma(shawarma.Additives);
             OutputCookingTimeShawarma(shawarma);
-            Console.WriteLine($"Цена: {shawarma.Cost()}");
+            Console.WriteLine($"Цена: {shawarma.ResultCost()}");
             Console.WriteLine("____________________________________________");
         }
 
